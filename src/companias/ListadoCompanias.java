@@ -39,40 +39,35 @@ public class ListadoCompanias {
         // Leemos el listado de companias del fichero xml
         this.contenedor = new ArrayList<Compania>();
         
-        File fXmlFile = new File("src/companias.xml");
+        File fXmlFile = new File("src/config/companias.xml");
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(fXmlFile);
 
         doc.getDocumentElement().normalize();
-
+        //Se obtiene la raiz '
         NodeList nList = doc.getElementsByTagName("compania");
         
         for (int temp = 0; temp < nList.getLength(); temp++) {
-
             Node nNode = nList.item(temp);
-
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
                 Element eElement = (Element) nNode;
-                
                 Compania c = new Compania ();
-                c.setNombre(eElement.getElementsByTagName("firstname").item(0).getTextContent());
-                c.setRutaConfig(eElement.getElementsByTagName("firstname").item(0).getTextContent());
-                c.setRutaIcono(eElement.getElementsByTagName("firstname").item(0).getTextContent());
-                
+                c.setNombre(eElement.getElementsByTagName("nombre").item(0).getTextContent());
+                c.setRutaConfig(eElement.getElementsByTagName("config").item(0).getTextContent());
+                c.setRutaIcono(eElement.getElementsByTagName("icono").item(0).getTextContent());
                 contenedor.add(c);
-
             }
         }
-        
-        
     }
     
     public ArrayList<String> getListadoOrdenadorCompanias()
     {
         // Se genera una lista de nombres de Cia y se ordena por orden alfabético
         ArrayList<String> c = new ArrayList<String>();
+        for (int temp = 0; temp < contenedor.size(); temp++) {
+            c.add(this.contenedor.get(temp).getNombre());
+        }
         Collections.sort(c);
         return c;
     }

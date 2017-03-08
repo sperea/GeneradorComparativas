@@ -66,6 +66,7 @@ public class mainForm extends javax.swing.JFrame {
 
         jButton2.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/save.png")); // NOI18N
         jButton2.setText("Guardar");
+        jButton2.setEnabled(false);
         jButton2.setFocusable(false);
         jButton2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
