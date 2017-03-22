@@ -6,12 +6,22 @@
 package ui;
 
 import companias.ListadoCompanias;
+import java.awt.Dialog;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
+import javax.swing.text.MaskFormatter;
+import javax.swing.JFormattedTextField;
+import javax.swing.text.DefaultFormatterFactory;
+import javax.swing.text.NumberFormatter;
 
 /**
  *
@@ -20,24 +30,51 @@ import org.xml.sax.SAXException;
 public class InsertarCompania extends javax.swing.JDialog {
 
     private ListadoCompanias listaCompanias;
+    
+    // Mascara para nuestra contraseña
+     private MaskFormatter mascaraMoneda() {
+         // Inicializamos el objeto
+         MaskFormatter mascara = new MaskFormatter();
+         // Entramos en un try/catch por alguna eventualidad
+         try {
+             // Creamos el formato de nuestra contraseña
+             // # -> un número U -> letra mayúscula L -> letra minúscula
+             // * -> cualquier caracter ' -> caracteres de escape
+             // A -> cualquier letra o número ? -> cualquier caracter
+             // H -> cualquier caracter hexagonal (0-9, a-f or A-F).
+             mascara = new MaskFormatter("#,##0.00 €");
+         } catch (ParseException e) {
+             // Algún error que pueda ocurrir
+             e.printStackTrace();
+         }
+         return mascara;
+     }    
+ 
     /**
      * Creates new form InsertarCompania
+     * @param parent
      */
-    public InsertarCompania(java.awt.Frame parent, boolean modal) throws ParserConfigurationException, SAXException, IOException {
-        super(parent, modal);
+    public InsertarCompania(mainForm parent, boolean modal) {
         initComponents();
-        listaCompanias = new ListadoCompanias();
-        
-        ArrayList<String> lista=listaCompanias.getListadoOrdenadorCompanias();
-        for(int i=0;i<lista.size();i++){
-            cbCompanias.add(lista.get(i), this);
+        try {
+            listaCompanias = new ListadoCompanias();
+        } catch (ParserConfigurationException | SAXException | IOException ex) {
+            Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-    }
+        this.checkDanosAguaCompartidos.setSelected(true);
+        
+        // Define the number factory.
+        NumberFormat nf = NumberFormat.getIntegerInstance(); // Specify specific format here.
+        NumberFormatter nff = new NumberFormatter(nf);
+        DefaultFormatterFactory factory = new DefaultFormatterFactory(nff);
 
-    InsertarCompania() throws ParserConfigurationException, SAXException, IOException {
-        initComponents();
-        listaCompanias = new ListadoCompanias();
+        // Define the decimal factory.
+        DecimalFormat df = new DecimalFormat(); // And here..
+        NumberFormatter dnff = new NumberFormatter(df);
+        DefaultFormatterFactory factory2 = new DefaultFormatterFactory(dnff); 
+
+        this.txtPrima.setFormatterFactory(factory2);
         
         ArrayList<String> lista=listaCompanias.getListadoOrdenadorCompanias();
         for(int i=0;i<lista.size();i++){
@@ -45,6 +82,31 @@ public class InsertarCompania extends javax.swing.JDialog {
         }
     }
 
+    /*
+    InsertarCompania() throws ParserConfigurationException, SAXException, IOException {
+        initComponents();
+        listaCompanias = new ListadoCompanias();
+        
+        this.checkDanosAguaCompartidos.setSelected(true);
+        
+        // Define the number factory.
+        NumberFormat nf = NumberFormat.getIntegerInstance(); // Specify specific format here.
+        NumberFormatter nff = new NumberFormatter(nf);
+        DefaultFormatterFactory factory = new DefaultFormatterFactory(nff);
+
+        // Define the decimal factory.
+        DecimalFormat df = new DecimalFormat(); // And here..
+        NumberFormatter dnff = new NumberFormatter(df);
+        DefaultFormatterFactory factory2 = new DefaultFormatterFactory(dnff); 
+
+        this.txtPrima.setFormatterFactory(factory2);
+        
+        ArrayList<String> lista=listaCompanias.getListadoOrdenadorCompanias();
+        for(int i=0;i<lista.size();i++){
+            cbCompanias.addItem(lista.get(i));
+        }
+    }
+    */
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,21 +117,59 @@ public class InsertarCompania extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         cbCompanias = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnInsertar = new javax.swing.JButton();
+        txtPrima = new javax.swing.JFormattedTextField();
+        jLabel3 = new javax.swing.JLabel();
+        checkDanosEsteticosPrivados = new javax.swing.JCheckBox();
+        checkDanosEsteticosCompartidos = new javax.swing.JCheckBox();
+        checkDanosAguaCompartidos = new javax.swing.JCheckBox();
+        checkDanosEsteticosPrivativos = new javax.swing.JCheckBox();
+        checkFranquicia = new javax.swing.JCheckBox();
+        txtFranquicia = new javax.swing.JTextField();
+        lblFranquicia = new javax.swing.JLabel();
+        txtObservaciones = new javax.swing.JTextField();
+        lblObservaciones = new javax.swing.JLabel();
+        btnCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
-
-        jTextField1.setText("jTextField1");
+        jLabel1.setText("Prima:");
 
         jLabel2.setText("Compañía:");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/add.png")); // NOI18N
-        jButton1.setText("Insertar nueva compañía");
+        btnInsertar.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/add.png")); // NOI18N
+        btnInsertar.setText("Insertar nueva compañía");
+
+        jLabel3.setText("€");
+
+        checkDanosEsteticosPrivados.setText("Daños estéticos privados");
+
+        checkDanosEsteticosCompartidos.setText("Daños estéticos compartidos");
+
+        checkDanosAguaCompartidos.setText("Daños por agua comunes");
+        checkDanosAguaCompartidos.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                checkDanosAguaCompartidosStateChanged(evt);
+            }
+        });
+
+        checkDanosEsteticosPrivativos.setText("Daños por agua privativos");
+
+        checkFranquicia.setText("Franquicia");
+
+        lblFranquicia.setText("Importe:");
+
+        lblObservaciones.setText("Observaciones:");
+
+        btnCancel.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/cancel-48.png")); // NOI18N
+        btnCancel.setText("Cancelar");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,19 +179,38 @@ public class InsertarCompania extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                        .addComponent(checkDanosEsteticosPrivativos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel2))
+                            .addGap(30, 30, 30)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(cbCompanias, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 50, Short.MAX_VALUE))
-                            .addComponent(jTextField1)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)))
-                .addContainerGap())
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(txtPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(2, 2, 2)
+                                    .addComponent(jLabel3))))
+                        .addComponent(checkDanosEsteticosPrivados)
+                        .addComponent(checkDanosAguaCompartidos)
+                        .addComponent(checkDanosEsteticosCompartidos)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(checkFranquicia)
+                            .addGap(47, 47, 47)
+                            .addComponent(lblFranquicia)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtFranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblObservaciones)
+                                .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,17 +219,57 @@ public class InsertarCompania extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbCompanias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPrima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3))
+                .addGap(23, 23, 23)
+                .addComponent(checkDanosEsteticosCompartidos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(checkDanosEsteticosPrivados)
+                .addGap(18, 18, 18)
+                .addComponent(checkDanosAguaCompartidos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(checkDanosEsteticosPrivativos)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkFranquicia)
+                    .addComponent(lblFranquicia)
+                    .addComponent(txtFranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblObservaciones))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(27, 27, 27))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void checkDanosAguaCompartidosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_checkDanosAguaCompartidosStateChanged
+        // TODO add your handling code here:
+        if(!checkDanosAguaCompartidos.isSelected()) {//checkbox has been de-selected
+            checkDanosEsteticosPrivativos.setVisible(false);
+            checkFranquicia.setVisible(false);
+            txtFranquicia.setVisible(false);
+            lblFranquicia.setVisible(false);
+        } else {//checkbox has been deselected.isSelected()
+            checkDanosEsteticosPrivativos.setVisible(true);
+            checkFranquicia.setVisible(true);
+            txtFranquicia.setVisible(true);
+            lblFranquicia.setVisible(true);
+        };
+    }//GEN-LAST:event_checkDanosAguaCompartidosStateChanged
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,15 +302,7 @@ public class InsertarCompania extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 InsertarCompania dialog = null;
-                try {
-                    dialog = new InsertarCompania(new javax.swing.JFrame(), true);
-                } catch (ParserConfigurationException ex) {
-                    Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SAXException ex) {
-                    Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                dialog = new InsertarCompania(new mainForm(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -164,10 +315,21 @@ public class InsertarCompania extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnInsertar;
     private javax.swing.JComboBox<String> cbCompanias;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox checkDanosAguaCompartidos;
+    private javax.swing.JCheckBox checkDanosEsteticosCompartidos;
+    private javax.swing.JCheckBox checkDanosEsteticosPrivados;
+    private javax.swing.JCheckBox checkDanosEsteticosPrivativos;
+    private javax.swing.JCheckBox checkFranquicia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblFranquicia;
+    private javax.swing.JLabel lblObservaciones;
+    private javax.swing.JTextField txtFranquicia;
+    private javax.swing.JTextField txtObservaciones;
+    private javax.swing.JFormattedTextField txtPrima;
     // End of variables declaration//GEN-END:variables
 }

@@ -159,6 +159,11 @@ public class mainForm extends javax.swing.JFrame {
         frmGenerarComunidades.setMaximizable(true);
         frmGenerarComunidades.setClosable(true);
         try {
+            frmGenerarComunidades.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(mainForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
             frmGenerarComunidades.setSelected(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(mainForm.class.getName()).log(Level.SEVERE, null, ex);
