@@ -28,7 +28,52 @@ import javax.swing.text.NumberFormatter;
  * @author sergio
  */
 public class InsertarCompania extends javax.swing.JDialog {
+    
+    public String getCompania()
+    {
+        return this.cbCompanias.getSelectedItem().toString();
+    }
+    
+    public String getPrima()
+    {
+        return this.txtPrima.getText();
+    }
+    
+    public boolean getDanosEsteticosComunes()
+    {
+        return this.checkDanosEsteticosCompartidos.isSelected();
+    }
+    
+    public boolean getDanosEsteticosPrivativos()
+    {
+        return this.checkDanosEsteticosPrivados.isSelected();
+    }
 
+    public boolean getDanosAguaComunes()
+    {
+        return this.checkDanosAguaCompartidos.isSelected();
+    }
+
+    public boolean getDanosAguaPrivativos()
+    {
+        return this.checkDanosAguaPrivativos.isSelected();
+    }
+    
+    public String getImporteFranquicia()
+    {
+        return this.txtFranquicia.getText();
+    }
+    
+    public boolean getTieneFranquicia()
+    {
+        return this.checkFranquicia.isSelected();
+    }
+    
+    public String getObservaciones()
+    {
+        return this.txtObservaciones.getText();
+    }
+    
     private ListadoCompanias listaCompanias;
     
     // Mascara para nuestra contraseña
@@ -53,9 +98,14 @@ public class InsertarCompania extends javax.swing.JDialog {
     /**
      * Creates new form InsertarCompania
      * @param parent
+     * @param modal
      */
-    public InsertarCompania(mainForm parent, boolean modal) {
+    public InsertarCompania(mainForm parent, String title, Dialog.ModalityType modalityType) {
+        
+        
+        this.setModalityType(modalityType);
         initComponents();
+        
         try {
             listaCompanias = new ListadoCompanias();
         } catch (ParserConfigurationException | SAXException | IOException ex) {
@@ -80,6 +130,9 @@ public class InsertarCompania extends javax.swing.JDialog {
         for(int i=0;i<lista.size();i++){
             cbCompanias.addItem(lista.get(i));
         }
+        
+        
+        
     }
 
     /*
@@ -125,13 +178,16 @@ public class InsertarCompania extends javax.swing.JDialog {
         checkDanosEsteticosPrivados = new javax.swing.JCheckBox();
         checkDanosEsteticosCompartidos = new javax.swing.JCheckBox();
         checkDanosAguaCompartidos = new javax.swing.JCheckBox();
-        checkDanosEsteticosPrivativos = new javax.swing.JCheckBox();
+        checkDanosAguaPrivativos = new javax.swing.JCheckBox();
         checkFranquicia = new javax.swing.JCheckBox();
         txtFranquicia = new javax.swing.JTextField();
         lblFranquicia = new javax.swing.JLabel();
         txtObservaciones = new javax.swing.JTextField();
         lblObservaciones = new javax.swing.JLabel();
         btnCancel = new javax.swing.JButton();
+        javax.swing.JButton btnCargarPdf = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -141,6 +197,11 @@ public class InsertarCompania extends javax.swing.JDialog {
 
         btnInsertar.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/add.png")); // NOI18N
         btnInsertar.setText("Insertar nueva compañía");
+        btnInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInsertarActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("€");
 
@@ -155,7 +216,7 @@ public class InsertarCompania extends javax.swing.JDialog {
             }
         });
 
-        checkDanosEsteticosPrivativos.setText("Daños por agua privativos");
+        checkDanosAguaPrivativos.setText("Daños por agua privativos");
 
         checkFranquicia.setText("Franquicia");
 
@@ -171,6 +232,11 @@ public class InsertarCompania extends javax.swing.JDialog {
             }
         });
 
+        btnCargarPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/file-48.png"))); // NOI18N
+        btnCargarPdf.setText("Incluir proyecto PDF");
+
+        jScrollPane2.setViewportView(jTextPane2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -178,39 +244,47 @@ public class InsertarCompania extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblObservaciones)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtObservaciones))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnCargarPdf, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(checkDanosEsteticosPrivativos, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2))
-                            .addGap(30, 30, 30)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cbCompanias, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txtPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(2, 2, 2)
-                                    .addComponent(jLabel3))))
-                        .addComponent(checkDanosEsteticosPrivados)
-                        .addComponent(checkDanosAguaCompartidos)
-                        .addComponent(checkDanosEsteticosCompartidos)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(checkFranquicia)
-                            .addGap(47, 47, 47)
-                            .addComponent(lblFranquicia)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtFranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblObservaciones)
-                                .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(23, 23, 23))
+                        .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbCompanias, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(2, 2, 2)
+                                        .addComponent(jLabel3))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(checkFranquicia)
+                                .addGap(47, 47, 47)
+                                .addComponent(lblFranquicia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtFranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(checkDanosEsteticosPrivados)
+                                    .addComponent(checkDanosEsteticosCompartidos))
+                                .addGap(114, 114, 114)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(checkDanosAguaCompartidos)
+                                    .addComponent(checkDanosAguaPrivativos, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,27 +299,31 @@ public class InsertarCompania extends javax.swing.JDialog {
                     .addComponent(jLabel1)
                     .addComponent(jLabel3))
                 .addGap(23, 23, 23)
-                .addComponent(checkDanosEsteticosCompartidos)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkDanosEsteticosCompartidos)
+                    .addComponent(checkDanosAguaCompartidos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkDanosEsteticosPrivados)
-                .addGap(18, 18, 18)
-                .addComponent(checkDanosAguaCompartidos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(checkDanosEsteticosPrivativos)
-                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(checkDanosEsteticosPrivados)
+                    .addComponent(checkDanosAguaPrivativos))
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(checkFranquicia)
                     .addComponent(lblFranquicia)
                     .addComponent(txtFranquicia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtObservaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblObservaciones))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnInsertar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(24, 24, 24))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCargarPdf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancel)
+                    .addComponent(btnInsertar))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -254,12 +332,12 @@ public class InsertarCompania extends javax.swing.JDialog {
     private void checkDanosAguaCompartidosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_checkDanosAguaCompartidosStateChanged
         // TODO add your handling code here:
         if(!checkDanosAguaCompartidos.isSelected()) {//checkbox has been de-selected
-            checkDanosEsteticosPrivativos.setVisible(false);
+            checkDanosAguaPrivativos.setVisible(false);
             checkFranquicia.setVisible(false);
             txtFranquicia.setVisible(false);
             lblFranquicia.setVisible(false);
         } else {//checkbox has been deselected.isSelected()
-            checkDanosEsteticosPrivativos.setVisible(true);
+            checkDanosAguaPrivativos.setVisible(true);
             checkFranquicia.setVisible(true);
             txtFranquicia.setVisible(true);
             lblFranquicia.setVisible(true);
@@ -270,6 +348,11 @@ public class InsertarCompania extends javax.swing.JDialog {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false); 
+    }//GEN-LAST:event_btnInsertarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,7 +385,7 @@ public class InsertarCompania extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 InsertarCompania dialog = null;
-                dialog = new InsertarCompania(new mainForm(), true);
+                dialog = new InsertarCompania(new mainForm(), "", Dialog.ModalityType.APPLICATION_MODAL);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -319,13 +402,15 @@ public class InsertarCompania extends javax.swing.JDialog {
     private javax.swing.JButton btnInsertar;
     private javax.swing.JComboBox<String> cbCompanias;
     private javax.swing.JCheckBox checkDanosAguaCompartidos;
+    private javax.swing.JCheckBox checkDanosAguaPrivativos;
     private javax.swing.JCheckBox checkDanosEsteticosCompartidos;
     private javax.swing.JCheckBox checkDanosEsteticosPrivados;
-    private javax.swing.JCheckBox checkDanosEsteticosPrivativos;
     private javax.swing.JCheckBox checkFranquicia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JLabel lblFranquicia;
     private javax.swing.JLabel lblObservaciones;
     private javax.swing.JTextField txtFranquicia;

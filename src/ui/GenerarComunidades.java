@@ -5,6 +5,7 @@
  */
 package ui;
 
+import java.awt.Dialog;
 import java.awt.Frame;
 import java.io.IOException;
 import java.io.Serializable;
@@ -172,9 +173,19 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         InsertarCompania dialog = null;
-        dialog = new InsertarCompania((mainForm) SwingUtilities.getAncestorOfClass(mainForm.class,this), false);
+        dialog = new InsertarCompania((mainForm) SwingUtilities.getAncestorOfClass(mainForm.class,this), "", Dialog.ModalityType.APPLICATION_MODAL);
         dialog.setLocationRelativeTo(null);
         dialog.setVisible(true);
+        
+        String compania = dialog.getCompania();
+        String prima = dialog.getPrima();
+        boolean danosEsteticosComunes = dialog.getDanosEsteticosComunes();
+        boolean danosEsteticosPrivados = dialog.getDanosEsteticosPrivativos();
+        boolean danosAguaComunes = dialog.getDanosAguaComunes();
+        boolean danosAguaPrivados = dialog.getDanosAguaPrivativos();
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
