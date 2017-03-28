@@ -5,8 +5,12 @@
  */
 package ui;
 
+import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
 import java.awt.Dialog;
 import java.awt.Frame;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
 import java.text.ParseException;
@@ -18,6 +22,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
+import pdf.TablaComparativa;
 
 /**
  *
@@ -71,6 +76,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -113,6 +119,14 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, -1));
 
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 150, 100));
+
         jSplitPane1.setTopComponent(jPanel2);
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -140,7 +154,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 963, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
@@ -196,11 +210,27 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreRiesgoActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        TablaComparativa t = new TablaComparativa ();
+        try {
+            t.crearPDF();
+            t.MarcaDeAgua("fichero.pdf", "fichero2.pdf", Image.getInstance("img/logo.jpg"));
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
