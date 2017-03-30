@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import pdf.Portada;
 import pdf.TablaComparativa;
 
 /**
@@ -218,6 +219,14 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
         } catch (DocumentException | IOException ex) {
             Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        Portada p = new Portada("0956702VK4705F0007WE");
+        try {
+            p.CrearPortada("portada.pdf");
+        } catch (DocumentException | FileNotFoundException ex) {
+            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     

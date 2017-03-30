@@ -7,10 +7,13 @@
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/gestorproyectos/GestorProyectos.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/InsertarCompania.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/GenerarComunidades.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/cuadroComunidades.json</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/companias/ListadoCompanias.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/companias/Compania.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/mainForm.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/pdf/Portada.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/pdf/TablaComparativa.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/comparativo.xml</file>
         </group>
     </open-files>
 </project-private>
