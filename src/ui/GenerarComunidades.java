@@ -5,23 +5,17 @@
  */
 package ui;
 
-import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import java.awt.Dialog;
-import java.awt.Frame;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Serializable;
-import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.xml.parsers.ParserConfigurationException;
-import org.xml.sax.SAXException;
 import pdf.TablaComparativa;
 
 /**
@@ -117,15 +111,17 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, -1));
 
-        jButton2.setText("jButton2");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/start-48.png"))); // NOI18N
+        jButton2.setToolTipText("");
+        jButton2.setLabel("Generar Proyecto");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 150, 100));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 230, 100));
 
         jSplitPane1.setTopComponent(jPanel2);
 
@@ -154,7 +150,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 963, Short.MAX_VALUE)
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1035, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
@@ -186,6 +182,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        @SuppressWarnings("UnusedAssignment")
         InsertarCompania dialog = null;
         dialog = new InsertarCompania((mainForm) SwingUtilities.getAncestorOfClass(mainForm.class,this), "", Dialog.ModalityType.APPLICATION_MODAL);
         dialog.setLocationRelativeTo(null);
@@ -218,9 +215,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
             t.MarcaDeAgua("fichero.pdf", "fichero2.pdf", Image.getInstance("img/logo.jpg"));
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (DocumentException ex) {
-            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
+        } catch (DocumentException | IOException ex) {
             Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton2ActionPerformed

@@ -7,7 +7,6 @@ package pdf;
 import java.io.*; 
 import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -17,7 +16,6 @@ import com.itextpdf.text.Image;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.Rectangle;
-import static com.itextpdf.text.html.HtmlTags.IMG;
 import com.itextpdf.text.pdf.ColumnText;
 import com.itextpdf.text.pdf.FontSelector;
 import com.itextpdf.text.pdf.PdfContentByte;
@@ -25,12 +23,8 @@ import com.itextpdf.text.pdf.PdfGState;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfPage;
-import com.itextpdf.text.pdf.PdfPageEvent;
-import com.itextpdf.text.pdf.PdfPageEventHelper;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
-import javafx.scene.transform.Rotate;
 /**
  *
  * @author sergio
@@ -46,7 +40,7 @@ public class TablaComparativa {
             return new PdfPCell();
         }
         
-        if (string == "S") 
+        if ("S".equals(string)) 
         {
             /*Image img = Image.getInstance(imagenSi);
             img.setAlignment(Image.ALIGN_CENTER);
@@ -63,7 +57,7 @@ public class TablaComparativa {
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
             return cell;
         }
-        if (string == "N") 
+        if ("N".equals(string)) 
         {
             /*Image img = Image.getInstance(imagenSi);
             img.setAlignment(Image.ALIGN_CENTER);
@@ -84,7 +78,7 @@ public class TablaComparativa {
         f.setColor(BaseColor.BLACK);
         //f.setSize(size);
         PdfPCell cell = new PdfPCell(new Phrase(string, f));
-        if (tipoCelda=="1")
+        if ("1".equals(tipoCelda))
         {
             cell.setHorizontalAlignment(Element.ALIGN_LEFT);
         }
@@ -93,7 +87,7 @@ public class TablaComparativa {
             cell.setHorizontalAlignment(Element.ALIGN_CENTER);
         }
         
-        if (string==" ")
+        if (" ".equals(string))
         {
             cell.setFixedHeight(2f);
         }
