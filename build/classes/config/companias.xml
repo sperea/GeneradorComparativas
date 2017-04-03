@@ -4,75 +4,90 @@
        <config>plusultra.json</config>
        <icono>plusultra.png</icono>
        <nombre>PLUS ULTRA</nombre>
+       <file>plusultra.xml</file>
     </compania>
     <compania>
        <config>helvetia.json</config>
        <icono>helvetia.png</icono>
        <nombre>HELVETIA</nombre>
+       <file>helvetia.xml</file>
     </compania>
     <compania>
        <config>generali.json</config>
        <icono>generali.png</icono>
        <nombre>GENERALI</nombre>
+       <file>generali.xml</file>
     </compania>
     <compania>
        <config>catalana.json</config>
        <icono>catalana.png</icono>
        <nombre>CATALANA OCCIDENTE</nombre>
+       <file>catalana.xml</file>
     </compania>
     <compania>
        <config>caser.json</config>
        <icono>caser.png</icono>
        <nombre>CASER</nombre>
+       <file>caser.xml</file>
     </compania>
     <compania>
        <config>mutua.json</config>
        <icono>mutua.png</icono>
        <nombre>MUTUA DE PROPIETARIOS</nombre>
+       <file>mutua.xml</file>
     </compania>
     <compania>
        <config>mapfre.json</config>
        <icono>mapfre.png</icono>
        <nombre>MAPFRE</nombre>
+       <file>mapfre.xml</file>
     </compania>
     <compania>
        <config>mussap.json</config>
        <icono>mussap.png</icono>
        <nombre>MUSSAP</nombre>
+       <file>mussap.xml</file>
     </compania>
     <compania>
        <config>ocaso.json</config>
        <icono>ocaso.png</icono>
        <nombre>OCASO</nombre>
+       <file>ocaso.xml</file>
     </compania>
     <compania>
        <config>allianz.json</config>
        <icono>allianz.png</icono>
        <nombre>ALLIANZ</nombre>
+       <file>allianz.xml</file>
     </compania>
     <compania>
        <config>reale.json</config>
        <icono>reale.png</icono>
        <nombre>REALE</nombre>
+       <file>reale.xml</file>
     </compania>
     <compania>
        <config>fiatc.json</config>
        <icono>fiatc.png</icono>
        <nombre>FIATC</nombre>
+       <file>fiatc.xml</file>
     </compania>
     <compania>
        <config>zurich.json</config>
        <icono>zurich.png</icono>
        <nombre>ZURICH</nombre>
+       <file>zurich.xml</file>
     </compania>
     <compania>
        <config>liberty.json</config>
        <icono>liberty.png</icono>
        <nombre>LIBERTY</nombre>
+       <file>liberty.xml</file>
     </compania>
     <compania>
        <config>santalucia.json</config>
        <icono>santalucia.png</icono>
        <nombre>SANTA LUCIA</nombre>
+       <file>santalucia.xml</file>
     </compania>
 </root>

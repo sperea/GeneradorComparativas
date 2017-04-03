@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <fila id="1">
+        <texto>Incendio, Explosión y caída del rayo</texto>
+    </fila>
+    <fila id="2">
+        <texto>Impacto de vehículos</texto>
+    </fila>
+    <fila id="3">
+        <texto>Bomberos</texto>
+    </fila>
+    <fila id="4">
+        <texto>Demolición y desescombro</texto>
+    </fila>
+    <fila id="5">
+        <texto>Inhabitabilidad</texto>
+    </fila>
+    <fila id="6">
+        <texto>Pérdida de alquileres</texto>
+    </fila>
+    <fila id="7">
+        <texto>Robo y expoliación</texto>
+    </fila>
+    <fila id="8">
+        <texto>Desperfectos por robo o expoliación en continente</texto>
+    </fila>
+    <fila id="9">
+        <texto>Hurto</texto>
+    </fila>
+    <fila id="10">
+        <texto>Rotura de lunas espejos y cristales comunitarios</texto>
+    </fila>
+    <fila id="11">
+        <texto>Rotura de lunas espejos y cristales privados exteriores</texto>
+    </fila>
+    <fila id="12">
+        <texto>Daños propios por aguas canalizaciones comunitarias</texto>
+    </fila>
+    <fila id="13">
+        <texto>Gastos de localización y reparación de averías</texto>
+    </fila>
+    <fila id="14">
+        <texto>Atascos y gastos desatranco</texto>
+    </fila>
+    <fila id="15">
+        <texto>Daños propios por agua canalizaciones privadas</texto>
+    </fila>
+    <fila id="16">
+        <texto>Actos de vandalismo o malintencionados</texto>
+    </fila>
+    <fila id="17">
+        <texto>Daños por lluvia, viento, pedrisco o nieve</texto>
+    </fila>
+    <fila id="18">
+        <texto></texto>
+    </fila>
+    <fila id="19">
+        <texto>Inundación</texto>
+    </fila>
+    <fila id="20">
+        <texto>Desbarre y extracción de lodos</texto>
+    </fila>
+    <fila id="21">
+        <texto>Humo</texto>
+    </fila>
+    <fila id="22">
+        <texto>Ondas sónicas</texto>
+    </fila>
+    <fila id="23">
+        <texto>Daños eléctricos</texto>
+    </fila>
+    <fila id="24">
+        <texto>Responsabilidad Civil General</texto>
+    </fila>  
+    <fila id="25">
+        <texto>Responsabilidad Civil por aguas comunes</texto>
+    </fila>  
+    <fila id="26">
+        <texto>Responsabilidad Civil patronal</texto>
+    </fila>  
+    <fila id="27">
+        <texto>Defensa y fianzas</texto>
+    </fila>  
+    <fila id="28">
+        <texto>Daños estéticos</texto>
+    </fila>
+    <fila id="29">
+        <texto>Defensa Juridica</texto>
+    </fila>  
+    <fila id="30">
+        <texto>Reclamación Cuotas impagados</texto>
+    </fila>  
+    <fila id="31">
+        <texto>Asistencia 24 horas</texto>
+    </fila>  
+    <fila id="32">
+        <texto>Franquicia</texto>
+    </fila>                                         
+</root>

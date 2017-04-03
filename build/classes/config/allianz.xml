@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<root>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <fila id="1">
+        <texto>Incendio, Explosión y caída del rayo</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="2">
+        <texto>Impacto de vehículos</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="3">
+        <texto>Bomberos</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="4">
+        <texto>Demolición y desescombro</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="5">
+        <texto>Inhabitabilidad</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="6">
+        <texto>Pérdida de alquileres</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="7">
+        <texto>Robo y expoliación</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="8">
+        <texto>Desperfectos por robo o expoliación en continente</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="9">
+        <texto>Hurto</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="10">
+        <texto>Rotura de lunas espejos y cristales comunitarios</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="11">
+        <texto>Rotura de lunas espejos y cristales privados exteriores</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="12">
+        <texto>Daños propios por aguas canalizaciones comunitarias</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="13">
+        <texto>Gastos de localización y reparación de averías</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="14">
+        <texto>Atascos y gastos desatranco</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="15">
+        <texto>Daños propios por agua canalizaciones privadas</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="16">
+        <texto>Actos de vandalismo o malintencionados</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="17">
+        <texto>Daños por lluvia, viento, pedrisco o nieve</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="18">
+        <texto>Inundación</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="19">
+        <texto>Desbarre y extracción de lodos</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="20">
+        <texto>Humo</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="21">
+        <texto>Ondas sónicas</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="22">
+        <texto>Daños eléctricos</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="23">
+        <texto>Responsabilidad Civil General</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="24">
+        <texto>Responsabilidad Civil por aguas comunes</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="25">
+        <texto>Responsabilidad Civil patronal</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="26">
+        <texto>Defensa y fianzas</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="27">
+        <texto>Daños estéticos</texto>
+        <valor>S</valor>
+    </fila>
+    <fila id="28">
+        <texto>Defensa Juridica</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="29">
+        <texto>Reclamación Cuotas impagados</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="30">
+        <texto>Asistencia 24 horas</texto>
+        <valor>S</valor>
+    </fila>  
+    <fila id="31">
+        <texto>Franquicia</texto>
+        <valor>S</valor>
+    </fila>                                         
+</root>

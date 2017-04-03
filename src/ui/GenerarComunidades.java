@@ -5,6 +5,7 @@
  */
 package ui;
 
+import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Image;
 import java.awt.Dialog;
@@ -46,6 +47,11 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
             CambiarTituloVentana(txtNombreRiesgo.getText());
           }
         });
+    }
+    
+    private void GenerarMatrizComparativa() {
+
+        
     }
     
     private void CambiarTituloVentana(String titulo) {
@@ -223,7 +229,9 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
         Portada p = new Portada("0956702VK4705F0007WE");
         try {
             p.CrearPortada("portada.pdf");
-        } catch (DocumentException | FileNotFoundException ex) {
+        } catch (BadElementException | IOException ex) {
+            Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
             Logger.getLogger(GenerarComunidades.class.getName()).log(Level.SEVERE, null, ex);
         }
         
@@ -231,7 +239,7 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
 
     
     
-    
+    private Object modeloTabla;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -248,4 +256,6 @@ public class GenerarComunidades extends javax.swing.JInternalFrame implements Se
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField txtNombreRiesgo;
     // End of variables declaration//GEN-END:variables
+
+
 }
