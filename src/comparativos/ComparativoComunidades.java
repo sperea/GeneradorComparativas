@@ -5,7 +5,14 @@
  */
 package comparativos;
 
-import java.util.Hashtable;
+import java.io.FileReader;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonPrimitive;
+import java.io.FileNotFoundException;
+import java.util.Map.Entry;
 
 /**
  *
@@ -13,19 +20,16 @@ import java.util.Hashtable;
  */
 public class ComparativoComunidades {
 
-    public ComparativoComunidades() {
-        filas = new Hashtable<>();
+    public ComparativoComunidades() throws FileNotFoundException {
+        JsonParser parser = new JsonParser();
+        FileReader fr = new FileReader("datos.json");
+        JsonElement datos = parser.parse(fr);
+        //dumpJSONElement(datos);
     }
 
     public void addTexto(String clave, String textContent) {
-        
-        Hashtable<String,String> contenedor=new Hashtable<>();
-        
-        contenedor.put(clave, textContent);
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
-    private Hashtable<String,String> filas;
 
 }

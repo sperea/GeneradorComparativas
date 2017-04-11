@@ -1,642 +1,649 @@
-[    
-        {
-            "nombre": "Incendio, Explosión y caída del rayo",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
+{
+"comparativo":
+    {
+    "Numfilas" : 32
+    },
+"filas":
+    [    
+            {
+                "nombre": "Incendio, Explosión y caída del rayo",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Impacto de vehículos",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Demolición y desescombro",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Inhabitabilidad",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "perdida de alquileres",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Robo y expoliación",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Desperfectos por robo o expoliación en continente",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Hurto",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Rotura de lunas espejos y cristales comunitarios",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Rotura de lunas espejos y cristales privados exteriores",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Daños propios por aguas canalizaciones comunitarias",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Gastos de localización y reparación de averías",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Atascos y gastos desatranco",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Daños propios por agua canalizaciones privadas",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Actos de vandalismo o malintencionados",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Daños por lluvia, viento, pedrisco o nieve",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Inundación",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Desbarre y extracción de lodos",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Humo",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Ondas sónicas",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Daños eléctricos",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Responsabilidad Civil General",
+                "companias": {
+                    "ALLIANZ": "300.000",
+                    "PLUSULTRA": "300.000",
+                    "HELVETIA": "300.000",
+                    "GENERALI": "300.000",
+                    "CATALANAOCCIDENTE": "300.000",
+                    "CASER": "300.000",
+                    "MUTUADEPROPIETARIOS": "300.000",
+                    "MAPFRE": "300.000",
+                    "MUSSAP": "300.000",
+                    "OCASO": "300.000",
+                    "REALE": "300.000",
+                    "FIATC": "300.000",
+                    "ZURICH": "300.000",
+                    "LIBERTY": "300.000",
+                    "SANTALUCIA": "300.000"
+                }
+            },
+            {
+                "nombre": "Responsabilidad Civil por aguas comunes",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Responsabilidad Civil patronal",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Defensa y fianzas",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Daños estéticos",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Defensa Juridica",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Reclamación Cuotas impagados",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Asistencia 24 horas",
+                "companias": {
+                    "ALLIANZ": "S",
+                    "PLUSULTRA": "S",
+                    "HELVETIA": "S",
+                    "GENERALI": "S",
+                    "CATALANAOCCIDENTE": "S",
+                    "CASER": "S",
+                    "MUTUADEPROPIETARIOS": "S",
+                    "MAPFRE": "S",
+                    "MUSSAP": "S",
+                    "OCASO": "S",
+                    "REALE": "S",
+                    "FIATC": "S",
+                    "ZURICH": "S",
+                    "LIBERTY": "S",
+                    "SANTALUCIA": "S"
+                }
+            },
+            {
+                "nombre": "Franquicia",
+                "companias": {
+                    "ALLIANZ": "240€",
+                    "PLUSULTRA": "100€",
+                    "HELVETIA": "100€",
+                    "GENERALI": "100€",
+                    "CATALANAOCCIDENTE": "100€",
+                    "CASER": "100€",
+                    "MUTUADEPROPIETARIOS": "100€",
+                    "MAPFRE": "150€",
+                    "MUSSAP": "100€",
+                    "OCASO": "100€",
+                    "REALE": "100€",
+                    "FIATC": "100€",
+                    "ZURICH": "100€",
+                    "LIBERTY": "100€",
+                    "SANTALUCIA": "100€"
+                }
+            },
+            {
+                "nombre": "CAPITAL BASE ASEGURADO",
+                "companias": {
+                    "ALLIANZ": "",
+                    "PLUSULTRA": "",
+                    "HELVETIA": "",
+                    "GENERALI": "",
+                    "CATALANAOCCIDENTE": "",
+                    "CASER": "",
+                    "MUTUADEPROPIETARIOS": "",
+                    "MAPFRE": "",
+                    "MUSSAP": "",
+                    "OCASO": "",
+                    "REALE": "",
+                    "FIATC": "",
+                    "ZURICH": "",
+                    "LIBERTY": "",
+                    "SANTALUCIA": ""
+                }
+            },
+            {
+                "nombre": "PRIMA ANUAL",
+                "companias": {
+                    "ALLIANZ": "",
+                    "PLUSULTRA": "",
+                    "HELVETIA": "",
+                    "GENERALI": "",
+                    "CATALANAOCCIDENTE": "",
+                    "CASER": "",
+                    "MUTUADEPROPIETARIOS": "",
+                    "MAPFRE": "",
+                    "MUSSAP": "",
+                    "OCASO": "",
+                    "REALE": "",
+                    "FIATC": "",
+                    "ZURICH": "",
+                    "LIBERTY": "",
+                    "SANTALUCIA": ""
+                }
             }
-        },
-        {
-            "nombre": "Impacto de vehículos",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Demolición y desescombro",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Inhabitabilidad",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "perdida de alquileres",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Robo y expoliación",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Desperfectos por robo o expoliación en continente",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Hurto",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Rotura de lunas espejos y cristales comunitarios",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Rotura de lunas espejos y cristales privados exteriores",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Daños propios por aguas canalizaciones comunitarias",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Gastos de localización y reparación de averías",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Atascos y gastos desatranco",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Daños propios por agua canalizaciones privadas",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Actos de vandalismo o malintencionados",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Daños por lluvia, viento, pedrisco o nieve",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Inundación",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Desbarre y extracción de lodos",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Humo",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Ondas sónicas",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Daños eléctricos",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Responsabilidad Civil General",
-            "companias": {
-                "ALLIANZ": "300.000",
-                "PLUSULTRA": "300.000",
-                "HELVETIA": "300.000",
-                "GENERALI": "300.000",
-                "CATALANAOCCIDENTE": "300.000",
-                "CASER": "300.000",
-                "MUTUADEPROPIETARIOS": "300.000",
-                "MAPFRE": "300.000",
-                "MUSSAP": "300.000",
-                "OCASO": "300.000",
-                "REALE": "300.000",
-                "FIATC": "300.000",
-                "ZURICH": "300.000",
-                "LIBERTY": "300.000",
-                "SANTALUCIA": "300.000"
-            }
-        },
-        {
-            "nombre": "Responsabilidad Civil por aguas comunes",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Responsabilidad Civil patronal",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Defensa y fianzas",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Daños estéticos",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Defensa Juridica",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Reclamación Cuotas impagados",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Asistencia 24 horas",
-            "companias": {
-                "ALLIANZ": "S",
-                "PLUSULTRA": "S",
-                "HELVETIA": "S",
-                "GENERALI": "S",
-                "CATALANAOCCIDENTE": "S",
-                "CASER": "S",
-                "MUTUADEPROPIETARIOS": "S",
-                "MAPFRE": "S",
-                "MUSSAP": "S",
-                "OCASO": "S",
-                "REALE": "S",
-                "FIATC": "S",
-                "ZURICH": "S",
-                "LIBERTY": "S",
-                "SANTALUCIA": "S"
-            }
-        },
-        {
-            "nombre": "Franquicia",
-            "companias": {
-                "ALLIANZ": "240€",
-                "PLUSULTRA": "100€",
-                "HELVETIA": "100€",
-                "GENERALI": "100€",
-                "CATALANAOCCIDENTE": "100€",
-                "CASER": "100€",
-                "MUTUADEPROPIETARIOS": "100€",
-                "MAPFRE": "150€",
-                "MUSSAP": "100€",
-                "OCASO": "100€",
-                "REALE": "100€",
-                "FIATC": "100€",
-                "ZURICH": "100€",
-                "LIBERTY": "100€",
-                "SANTALUCIA": "100€"
-            }
-        },
-        {
-            "nombre": "CAPITAL BASE ASEGURADO",
-            "companias": {
-                "ALLIANZ": "",
-                "PLUSULTRA": "",
-                "HELVETIA": "",
-                "GENERALI": "",
-                "CATALANAOCCIDENTE": "",
-                "CASER": "",
-                "MUTUADEPROPIETARIOS": "",
-                "MAPFRE": "",
-                "MUSSAP": "",
-                "OCASO": "",
-                "REALE": "",
-                "FIATC": "",
-                "ZURICH": "",
-                "LIBERTY": "",
-                "SANTALUCIA": ""
-            }
-        },
-        {
-            "nombre": "PRIMA ANUAL",
-            "companias": {
-                "ALLIANZ": "",
-                "PLUSULTRA": "",
-                "HELVETIA": "",
-                "GENERALI": "",
-                "CATALANAOCCIDENTE": "",
-                "CASER": "",
-                "MUTUADEPROPIETARIOS": "",
-                "MAPFRE": "",
-                "MUSSAP": "",
-                "OCASO": "",
-                "REALE": "",
-                "FIATC": "",
-                "ZURICH": "",
-                "LIBERTY": "",
-                "SANTALUCIA": ""
-            }
-        }
-]
+    ]
+}
