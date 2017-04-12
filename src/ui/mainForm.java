@@ -182,12 +182,7 @@ public class mainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_LoadWindowActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        try {
-            // TODO add your handling code here:
-            ComparativoComunidades c = new ComparativoComunidades();
-        } catch (IOException ex) {
-            Logger.getLogger(mainForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        ComparativoComunidades c = new ComparativoComunidades();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

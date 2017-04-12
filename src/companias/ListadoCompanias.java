@@ -54,6 +54,19 @@ public class ListadoCompanias {
         }
     }
     
+    private String GetFicheroConfig (String nombreCompania)
+    {
+        String salida = "";
+        for (Compania companiaActual: this.contenedor)
+        {
+            if (nombreCompania.equals(companiaActual.getNombre()))
+            {
+                salida = companiaActual.getRutaConfig();
+            }
+        }
+        return salida;
+    }
+    
     public ArrayList<String> getListadoOrdenadorCompanias()
     {
         // Se genera una lista de nombres de Cia y se ordena por orden alfabético
@@ -65,6 +78,7 @@ public class ListadoCompanias {
         return c;
     }
     
+    /*
     public ArrayList<String> getListadoOrdenadoCampos() throws ParserConfigurationException, SAXException, IOException
     {
         
@@ -99,6 +113,6 @@ public class ListadoCompanias {
         }
         Collections.sort(c);
         return c;
-    }
+    }*/
     
 }

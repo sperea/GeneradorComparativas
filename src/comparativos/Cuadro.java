@@ -10,6 +10,19 @@ package comparativos;
  * @author sergio
  */
 class Cuadro {
+    
+    private String nombre;
+    private String logo;
+    private Fila[] filas;
+
+    private void AsignarClaveValor(String clave, String valor)
+    {
+        for (Fila elemento: filas)
+            if (elemento.getNombre().equals(clave))
+            {
+                elemento.setValor(valor);
+            }
+    }
 
     public String getNombre() {
         return nombre;
@@ -33,19 +46,6 @@ class Cuadro {
 
     public void setFilas(Fila[] filas) {
         this.filas = filas;
-    }
-    
-    private String nombre;
-    private String logo;
-    private Fila[] filas;
-
-    private void AsignarClaveValor(String clave, String valor)
-    {
-        for (Fila elemento: filas)
-            if (elemento.getNombre().equals(clave))
-            {
-                elemento.setValor(valor);
-            }
     }
     
     public void setRc(String rc) {

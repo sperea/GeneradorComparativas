@@ -12,30 +12,68 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
 
 /**
  *
  * @author sergio
  */
 public class ComparativoComunidades {
+    
+    ArrayList<Cuadro> columnas;  
 
-    public ComparativoComunidades() throws FileNotFoundException, IOException {
+    public ComparativoComunidades() {
+        this.columnas = new ArrayList<>();
+    }
+
+    public void InsertarOferta(String ficheroConfig) throws FileNotFoundException, IOException {
         final GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(Cuadro.class, new CuadroDeserializer());
         gsonBuilder.registerTypeAdapter(Fila.class, new FilaDeserializer());
         final Gson gson = gsonBuilder.create();
 
         // Read the JSON data
-        try (Reader reader = new InputStreamReader(ComparativoComunidades.class.getResourceAsStream("/config/allianz.json"), "UTF-8")) {
+        try (Reader reader = new InputStreamReader(ComparativoComunidades.class.getResourceAsStream("/config/"), "UTF-8")) {
 
           // Parse JSON to Java
           final Cuadro cuadro = gson.fromJson(reader, Cuadro.class);
-          System.out.println(cuadro);
+          boolean add = this.columnas.add(cuadro);
+          //System.out.println(cuadro);
         }
     }
 
-    public void addTexto(String clave, String textContent) {
-
+    public String[][] toArray(){
+        
+        //return 
+        // ¿cuantas filas?
+        int numFilas = 0;
+        int numColumnas = 0;
+        if (columnas.size() > 0)  {
+            numColumnas = columnas.size() + 1;
+            numFilas = columnas.get(0).getFilas().length;
+        }
+        
+        String[][] toArrayAux = new String [numColumnas][numFilas];
+        
+        // primera columna
+        
+        for (int i=0 ;i<numFilas; i++)
+        {
+            toArrayAux[i][0] = columnas.get(0).getFilas()[i].getNombre();
+        }
+        
+        //resto de columnas
+        for (int i=0 ;i<numFilas; i++)
+        {   
+            for (int j=0 ;j<numColumnas; j++)
+            {
+                toArrayAux[i][j+1] = columnas.get(j).getFilas()[i].getNombre();
+            }
+            
+        }
+        
+        return toArrayAux;
+        
     }
 
 
