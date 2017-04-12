@@ -4,10 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/gestorproyectos/GestorProyectos.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/comparativos/Cuadro.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/cuadroComunidades.json</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/companias/ListadoCompanias.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/companias/Compania.java</file>
-            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/filas.xml</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/comparativos/Fila.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/comparativos/ComparativoComunidades.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/pdf/TablaComparativa.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/comparativo.xml</file>
@@ -15,8 +16,10 @@
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/allianz.xml</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/InsertarCompania.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/GenerarComunidades.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/comparativos/FilaDeserializer.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/ui/mainForm.java</file>
             <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/pdf/Portada.java</file>
+            <file>file:/home/sergio/NetBeansProjects/GestorProyectos/src/config/allianz.json</file>
         </group>
     </open-files>
 </project-private>

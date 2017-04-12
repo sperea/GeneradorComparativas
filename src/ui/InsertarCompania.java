@@ -6,20 +6,18 @@
 package ui;
 
 import companias.ListadoCompanias;
+import comparativos.ComparativoComunidades;
 import java.awt.Dialog;
 import java.io.IOException;
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 import javax.swing.text.MaskFormatter;
-import javax.swing.JFormattedTextField;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.NumberFormatter;
 
@@ -102,7 +100,8 @@ public class InsertarCompania extends javax.swing.JDialog {
      */
     public InsertarCompania(mainForm parent, String title, Dialog.ModalityType modalityType) {
         
-        
+        comparativoComunidades = new ComparativoComunidades();
+                
         this.setModalityType(modalityType);
         initComponents();
         
@@ -134,6 +133,8 @@ public class InsertarCompania extends javax.swing.JDialog {
         
         
     }
+    
+    private ComparativoComunidades comparativoComunidades;
 
     /*
     InsertarCompania() throws ParserConfigurationException, SAXException, IOException {
@@ -352,6 +353,11 @@ public class InsertarCompania extends javax.swing.JDialog {
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
         // TODO add your handling code here:
         this.setVisible(false); 
+        try {
+            comparativoComunidades.InsertarOferta("allianz.json");
+        } catch (IOException ex) {
+            Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnInsertarActionPerformed
 
     /**

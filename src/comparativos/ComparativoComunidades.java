@@ -69,9 +69,7 @@ public class ComparativoComunidades {
             {
                 toArrayAux[i][j+1] = columnas.get(j).getFilas()[i].getNombre();
             }
-            
         }
-        
         return toArrayAux;
         
     }
