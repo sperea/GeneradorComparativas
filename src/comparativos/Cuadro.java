@@ -38,7 +38,29 @@ class Cuadro {
     private String nombre;
     private String logo;
     private Fila[] filas;
+
+    private void AsignarClaveValor(String clave, String valor)
+    {
+        for (Fila elemento: filas)
+            if (elemento.getNombre().equals(clave))
+            {
+                elemento.setValor(valor);
+            }
+    }
     
+    public void setRc(String rc) {
+        AsignarClaveValor("Responsabilidad Civil General", rc);
+    }
+
+    public void setPrima(String prima) {
+        AsignarClaveValor("PRIMA ANUAL", prima);
+    }
     
-    
+    public void SetCapital(String capital) {
+        AsignarClaveValor("CAPITAL BASE ASEGURADO", capital);
+    }
+
+    public void setFranquicia(String franquicia) {
+        AsignarClaveValor("Franquicia", franquicia);
+    }    
 }

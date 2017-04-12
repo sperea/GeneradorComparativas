@@ -5,14 +5,13 @@
  */
 package comparativos;
 
-import java.io.FileReader;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonPrimitive;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.FileNotFoundException;
-import java.util.Map.Entry;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 /**
  *
@@ -20,11 +19,19 @@ import java.util.Map.Entry;
  */
 public class ComparativoComunidades {
 
-    public ComparativoComunidades() throws FileNotFoundException {
-        JsonParser parser = new JsonParser();
-        FileReader fr = new FileReader("datos.json");
-        JsonElement datos = parser.parse(fr);
-        //dumpJSONElement(datos);
+    public ComparativoComunidades() throws FileNotFoundException, IOException {
+        final GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.registerTypeAdapter(Cuadro.class, new CuadroDeserializer());
+        gsonBuilder.registerTypeAdapter(Fila.class, new FilaDeserializer());
+        final Gson gson = gsonBuilder.create();
+
+        // Read the JSON data
+        try (Reader reader = new InputStreamReader(ComparativoComunidades.class.getResourceAsStream("/config/allianz.json"), "UTF-8")) {
+
+          // Parse JSON to Java
+          final Cuadro cuadro = gson.fromJson(reader, Cuadro.class);
+          System.out.println(cuadro);
+        }
     }
 
     public void addTexto(String clave, String textContent) {

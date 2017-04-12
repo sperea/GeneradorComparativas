@@ -1,199 +1,196 @@
 {
-"comparativo":
-    {
-    nombre: "ALLIANZ"
-    logo: "allianz.png"
-    },
+"nombre": "ALLIANZ",
+"logo": "allianz.png",
 "filas":
     [    
             {
-                "num": 1
+                "num": 1,
                 "nombre": "Incendio, Explosión y caída del rayo",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 2
+                "num": 2,
                 "nombre": "Impacto de vehículos",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 3
+                "num": 3,
                 "nombre": "Demolición y desescombro",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 4
+                "num": 4,
                 "nombre": "Inhabitabilidad",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 5
+                "num": 5,
                 "nombre": "Pérdida de alquileres",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 6
+                "num": 6,
                 "nombre": "Robo y expoliación",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 7
+                "num": 7,
                 "nombre": "Desperfectos por robo o expoliación en continente",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 8
+                "num": 8,
                 "nombre": "Hurto",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 9
+                "num": 9,
                 "nombre": "Rotura de lunas espejos y cristales comunitarios",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 10
+                "num": 10,
                 "nombre": "Rotura de lunas espejos y cristales privados exteriores",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 11
+                "num": 11,
                 "nombre": "Daños propios por aguas canalizaciones comunitarias",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 12
+                "num": 12,
                 "nombre": "Gastos de localización y reparación de averías",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 13
+                "num": 13,
                 "nombre": "Atascos y gastos desatranco",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 14
+                "num": 14,
                 "nombre": "Daños propios por agua canalizaciones privadas",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 15
+                "num": 15,
                 "nombre": "Actos de vandalismo o malintencionados",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 16
+                "num": 16,
                 "nombre": "Daños por lluvia, viento, pedrisco o nieve",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 17
+                "num": 17,
                 "nombre": "Inundación",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 18
+                "num": 18,
                 "nombre": "Desbarre y extracción de lodos",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 19
+                "num": 19,
                 "nombre": "Humo",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 20
+                "num": 20,
                 "nombre": "Ondas sónicas",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 21
+                "num": 21,
                 "nombre": "Daños eléctricos",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 22
+                "num": 22,
                 "nombre": "Responsabilidad Civil General",
                 "valor": "",
                 "separador": 0
             },
             {
-                "num": 23
+                "num": 23,
                 "nombre": "Responsabilidad Civil por aguas comunes",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 24
+                "num": 24,
                 "nombre": "Responsabilidad Civil patronal",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 25
+                "num": 25,
                 "nombre": "Defensa y fianzas",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 26
+                "num": 26,
                 "nombre": "Daños estéticos",
                 "valor": "",
                 "separador": 0
             },
             {
-                "num": 27
+                "num": 27,
                 "nombre": "Defensa Juridica",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 28
+                "num": 28,
                 "nombre": "Reclamación Cuotas impagados",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 29
+                "num": 29,
                 "nombre": "Asistencia 24 horas",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 30
+                "num": 30,
                 "nombre": "Franquicia",
                 "valor": "S",
                 "separador": 0
             },
             {
-                "num": 31
+                "num": 31,
                 "nombre": "CAPITAL BASE ASEGURADO",
                 "valor": "",
                 "separador": 0
             },
             {
-                "num": 32
+                "num": 32,
                 "nombre": "PRIMA ANUAL",
                 "valor": "",
                 "separador": 0

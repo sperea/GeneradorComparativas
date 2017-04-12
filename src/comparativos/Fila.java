@@ -47,5 +47,5 @@ class Fila {
     private String nombre;
     private String valor;
     private String separador;
-
+    
 }

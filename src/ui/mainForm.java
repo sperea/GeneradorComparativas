@@ -5,7 +5,9 @@
  */
 package ui;
 
+import comparativos.ComparativoComunidades;
 import java.beans.PropertyVetoException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JInternalFrame;
@@ -84,6 +86,11 @@ public class mainForm extends javax.swing.JFrame {
         jButton3.setFocusable(false);
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jToolBar1.add(jButton3);
 
         jButton4.setIcon(new javax.swing.ImageIcon("/home/sergio/NetBeansProjects/GestorProyectos/src/icons/catastro.png")); // NOI18N
@@ -173,6 +180,15 @@ public class mainForm extends javax.swing.JFrame {
     private void LoadWindowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadWindowActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_LoadWindowActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try {
+            // TODO add your handling code here:
+            ComparativoComunidades c = new ComparativoComunidades();
+        } catch (IOException ex) {
+            Logger.getLogger(mainForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

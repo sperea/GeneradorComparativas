@@ -27,8 +27,8 @@ public class CuadroDeserializer implements JsonDeserializer<Cuadro> {
       throws JsonParseException {
    final JsonObject jsonObject = json.getAsJsonObject();
 
-    final String nombre = jsonObject.get("title").getAsString();
-    final String logo = jsonObject.get("isbn-10").getAsString();
+    final String nombre = jsonObject.get("nombre").getAsString();
+    final String logo = jsonObject.get("logo").getAsString();
 
     // Delegate the deserialization to the context
     Fila[] filas = context.deserialize(jsonObject.get("filas"), Fila[].class);
