@@ -7,10 +7,8 @@ package ui;
 
 import comparativos.ComparativoComunidades;
 import java.beans.PropertyVetoException;
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JInternalFrame;
 
 /**
  *

@@ -8,13 +8,18 @@ package ui;
 import companias.ListadoCompanias;
 import comparativos.ComparativoComunidades;
 import java.awt.Dialog;
+import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
+import static java.util.Locale.filter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 import javax.swing.text.MaskFormatter;
@@ -235,6 +240,11 @@ public class InsertarCompania extends javax.swing.JDialog {
 
         btnCargarPdf.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/file-48.png"))); // NOI18N
         btnCargarPdf.setText("Incluir proyecto PDF");
+        btnCargarPdf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCargarPdfActionPerformed(evt);
+            }
+        });
 
         jScrollPane2.setViewportView(jTextPane2);
 
@@ -359,6 +369,20 @@ public class InsertarCompania extends javax.swing.JDialog {
             Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnInsertarActionPerformed
+
+    private void btnCargarPdfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCargarPdfActionPerformed
+        // TODO add your handling code here:
+        final JFileChooser fc = new JFileChooser();
+        FileFilter filter = new FileNameExtensionFilter("PDF file", "pdf", "PDF");
+        fc.setFileFilter(filter);
+        SelectorFichero sel = new SelectorFichero();
+        int returnVal = fc.showOpenDialog(sel);
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            File file = fc.getSelectedFile();
+            jTextPane2.setText(file.getAbsolutePath());
+        } 
+    }//GEN-LAST:event_btnCargarPdfActionPerformed
 
     /**
      * @param args the command line arguments
