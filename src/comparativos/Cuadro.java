@@ -47,20 +47,10 @@ class Cuadro {
     public void setFilas(Fila[] filas) {
         this.filas = filas;
     }
-    
-    public void setRc(String rc) {
-        AsignarClaveValor("Responsabilidad Civil General", rc);
-    }
 
-    public void setPrima(String prima) {
-        AsignarClaveValor("PRIMA ANUAL", prima);
+    public void setClaveValor(String clave, String valor)
+    {
+        AsignarClaveValor(clave, valor);
     }
     
-    public void SetCapital(String capital) {
-        AsignarClaveValor("CAPITAL BASE ASEGURADO", capital);
-    }
-
-    public void setFranquicia(String franquicia) {
-        AsignarClaveValor("Franquicia", franquicia);
-    }    
 }

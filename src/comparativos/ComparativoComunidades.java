@@ -26,7 +26,13 @@ public class ComparativoComunidades {
         this.columnas = new ArrayList<>();
     }
 
-    public void InsertarOferta(String ficheroConfig) throws FileNotFoundException, IOException {
+    public void InsertarOferta(String ficheroConfig,
+                               boolean danosEsteticosCom,
+                               boolean danosEsteticosPriv,
+                               boolean danosAguaCom,
+                               boolean danosAguaPriv,
+                               boolean franquicia,
+                               String  importeFranquicia) throws FileNotFoundException, IOException {
         final GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(Cuadro.class, new CuadroDeserializer());
         gsonBuilder.registerTypeAdapter(Fila.class, new FilaDeserializer());
@@ -36,7 +42,14 @@ public class ComparativoComunidades {
         try (Reader reader = new InputStreamReader(ComparativoComunidades.class.getResourceAsStream("/config/"), "UTF-8")) {
 
           // Parse JSON to Java
-          final Cuadro cuadro = gson.fromJson(reader, Cuadro.class);
+          Cuadro cuadro = gson.fromJson(reader, Cuadro.class);
+          
+          cuadro = SetDanosEsteticosCom(danosEsteticosCom, cuadro);
+          cuadro = SetDanosEsteticosPriv(danosEsteticosPriv, cuadro);
+          cuadro = SetDanosAguaCom(danosAguaCom, cuadro);
+          cuadro = SetDanosAguaPriv(danosAguaPriv, cuadro);
+          cuadro = SetFranquicia(franquicia, importeFranquicia, cuadro);
+          
           boolean add = this.columnas.add(cuadro);
           //System.out.println(cuadro);
         }
@@ -74,5 +87,93 @@ public class ComparativoComunidades {
         
     }
 
+    private Cuadro SetDanosEsteticosCom(boolean danosEsteticosCom, Cuadro cuadro) {
 
+       Cuadro cuadroAux = cuadro;
+       
+        if (danosEsteticosCom)
+        {
+            cuadroAux.setClaveValor("Daños estéticos", "S");
+        }
+        else
+        {
+            cuadroAux.setClaveValor("Daños estéticos", "N");
+        }
+       
+       return cuadroAux;
+    }
+
+    private Cuadro SetDanosEsteticosPriv(boolean danosEsteticosPriv, Cuadro cuadro) {
+       Cuadro cuadroAux = cuadro;
+       
+        if (danosEsteticosPriv)
+        {
+            cuadroAux.setClaveValor("Daños estéticos", "S");
+        }
+        else
+        {
+            cuadroAux.setClaveValor("Daños estéticos", "N");
+        }
+       
+       return cuadroAux;
+    }
+
+    private Cuadro SetDanosAguaCom(boolean danosAguaCom, Cuadro cuadro) {
+       Cuadro cuadroAux = cuadro;
+       
+        if (danosAguaCom)
+        {
+            cuadroAux.setClaveValor("Daños propios por aguas canalizaciones comunitarias", "S");
+            cuadroAux.setClaveValor("Gastos de localización y reparación de averías", "S");
+            cuadroAux.setClaveValor("Atascos y gastos desatranco", "S");
+            cuadroAux.setClaveValor("Responsabilidad Civil por aguas comunes", "S");
+        }
+        else
+        {
+            cuadroAux.setClaveValor("Daños propios por aguas canalizaciones comunitarias", "N");
+            cuadroAux.setClaveValor("Gastos de localización y reparación de averías", "N");
+            cuadroAux.setClaveValor("Atascos y gastos desatranco", "N");
+            cuadroAux.setClaveValor("Responsabilidad Civil por aguas comunes", "N");
+        }
+       
+       return cuadroAux;
+    }
+
+    private Cuadro SetDanosAguaPriv(boolean danosAguaPriv, Cuadro cuadro) {
+       Cuadro cuadroAux = cuadro;
+       
+        if (danosAguaPriv)
+        {
+            cuadroAux.setClaveValor("Daños propios por aguas canalizaciones comunitarias", "S");
+            cuadroAux.setClaveValor("Daños propios por agua canalizaciones privadas", "S");
+            cuadroAux.setClaveValor("Gastos de localización y reparación de averías", "S");
+            cuadroAux.setClaveValor("Atascos y gastos desatranco", "S");
+            cuadroAux.setClaveValor("Responsabilidad Civil por aguas comunes", "S");
+        }
+        else
+        {
+            cuadroAux.setClaveValor("Daños propios por aguas canalizaciones comunitarias", "N");
+            cuadroAux.setClaveValor("Daños propios por agua canalizaciones privadas", "N");
+            cuadroAux.setClaveValor("Gastos de localización y reparación de averías", "N");
+            cuadroAux.setClaveValor("Atascos y gastos desatranco", "N");
+            cuadroAux.setClaveValor("Responsabilidad Civil por aguas comunes", "N");
+        }
+       
+       return cuadroAux;
+    }
+
+    private Cuadro SetFranquicia(boolean franquicia, String importeFranquicia, Cuadro cuadro) {
+       Cuadro cuadroAux = cuadro;
+       
+        if (franquicia)
+        {
+            cuadroAux.setClaveValor("Franquicia", importeFranquicia);
+        }
+        else
+        {
+            cuadroAux.setClaveValor("Franquicia", "N");
+        }
+       
+       return cuadroAux;
+    }
 }

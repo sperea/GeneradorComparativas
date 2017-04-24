@@ -364,7 +364,19 @@ public class InsertarCompania extends javax.swing.JDialog {
         // TODO add your handling code here:
         this.setVisible(false); 
         try {
-            comparativoComunidades.InsertarOferta("allianz.json");
+            boolean danosEsteticosCom = checkDanosEsteticosCompartidos.isSelected();
+            boolean danosEsteticosPriv = checkDanosEsteticosPrivados.isSelected();
+            boolean danosAguaCom = checkDanosAguaCompartidos.isSelected();
+            boolean danosAguaPriv = checkDanosAguaPrivativos.isSelected();
+            boolean franquicia = checkFranquicia.isSelected();
+            String  importeFranquicia = txtFranquicia.getText();
+            comparativoComunidades.InsertarOferta("allianz.json",
+                                                    danosEsteticosCom,
+                                                    danosEsteticosPriv,
+                                                    danosAguaCom,
+                                                    danosAguaPriv,
+                                                    franquicia,
+                                                    importeFranquicia);
         } catch (IOException ex) {
             Logger.getLogger(InsertarCompania.class.getName()).log(Level.SEVERE, null, ex);
         }
